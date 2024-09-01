@@ -71,7 +71,7 @@ function App() {
       <form onSubmit={handleSubmit}>
           <input type="text" placeholder='movie name' required onChange={(e)=>{setname(e.target.value)}}/>
           <input type="text" placeholder='description' required onChange={(e)=>{setdesc(e.target.value)}}/>
-          <input type="file" required onChange={(e)=>{setCount(e.target.files[0])}}/>
+          <input type="file" accept='document/pdf' required onChange={(e)=>{setCount(e.target.files[0])}}/>
           <button type='submit'>save</button>
       </form>
       <video src={videoURL} controlsList='nodownload' controls></video>

@@ -10,6 +10,7 @@ const path = require('path');
 const cors = require('cors');
 const { read } = require('fs');
 const app = express();
+require('dotenv').config()
 
 //middlewares
 app.use(express.json({limit:'16mb'}));
@@ -17,8 +18,7 @@ app.use(cors());
 
 connect();
 
-const url = 'mongodb://localhost:27017/DB'
-
+const url = process.env.MONGO_URL;
 
 const conns = mongoose.connection;
 
@@ -42,7 +42,7 @@ conns.once('open',()=>{
 //initialize storage engine
 
 const storage = new GridFsStorage({
-    url: 'mongodb://localhost:27017/DB',
+    url: url,
     file: (req, file) => {
       return new Promise((resolve, reject) => {
         crypto.randomBytes(16, (err, buf) => {
