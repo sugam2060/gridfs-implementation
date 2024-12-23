@@ -10,7 +10,7 @@
 - Replace the mongodb connection string with your string
 - go to the project files, at backend run npm i and do same for frontend
 - after both frontend and backend packages are installed run npm run dev for both
-- Now go to frontend and upload photoes. You can only Upload 6 photoes which should be less then 20MB in size combined
+- Now go to frontend and upload photoes. You can only Upload 6 photoes which should be less then 20MB in size combined, but you can tweak backend according to the size of files you want to upload
 - Refress the page. Now You will get the images
 
 ## Error Handling
